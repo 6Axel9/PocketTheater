@@ -1,29 +1,12 @@
 <!DOCTYPE html>
-
-<style>
-body {
-  margin-top: 10vh;
-  width: 100vw;
-  height: 80vh;
-  overflow: hidden;
-  text-align: center;
-}
-
-canvas {
-  height: 100%;
-  object-fit: scale-down;
-}
-
-</style>
-
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | PocketTheater</title>
   </head>
-  <body>
-    <canvas id="unity-canvas" width="1280" height="720" style="background: #231F20"></canvas>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=1024 height=576 style="width: 1024px; height: 576px; background: #231F20"></canvas>
     <script src="Build/PocketTheater.loader.js"></script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
@@ -34,8 +17,8 @@ canvas {
         companyName: "MariangelaLonigro",
         productName: "PocketTheater",
         productVersion: "0.1",
-        matchWebGLToCanvasSize: true, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-        devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
     </script>
   </body>
